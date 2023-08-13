@@ -1,0 +1,271 @@
+@font-face {
+  font-family: "zennew";
+  src: url("../font/ZenKakuGothicNew-Light.ttf");
+}
+@font-face {
+  font-family: "zennewB";
+  src: url("../font/ZenKakuGothicNew-Bold.ttf");
+}
+@font-face {
+  font-family: "halimun";
+  src: url("../font/Halimun.ttf");
+}
+@font-face {
+  font-family: "tsunagi";
+  src: url("../font/TsunagiGothic.ttf");
+}
+* {
+  box-sizing: border-box;
+  font-family: "zennew";
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.section-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.section-title {
+  display: block;
+  font-family: "halimun", serif;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 100px;
+}
+
+body {
+  margin: 0;
+}
+
+.top-wrapper {
+  height: 600px;
+  width: 100%;
+  background-image: url("../images/photo/landscape.png");
+  background-size: cover;
+}
+.top-wrapper .container {
+  padding-top: 300px;
+}
+.top-wrapper h1,
+.top-wrapper h3 {
+  color: white;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.top-wrapper h1 {
+  display: inline-block;
+  margin-bottom: 0px;
+  font-size: 50px;
+  text-shadow: #e6e6e6;
+  letter-spacing: 8px;
+}
+.top-wrapper h3 {
+  font-size: 25px;
+  letter-spacing: 4px;
+}
+
+header {
+  height: 40px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 10;
+  position: fixed;
+}
+header .container {
+  height: 100%;
+}
+header a {
+  font-weight: bold;
+  color: black;
+}
+header a:hover {
+  color: blue;
+}
+header .icon,
+header h1,
+header li {
+  float: left;
+}
+header .icon {
+  height: 40px;
+}
+header h1 {
+  font-family: "zennewB";
+  letter-spacing: 5px;
+  font-size: 30px;
+  margin: 0 10px;
+}
+header li {
+  margin-right: 10px;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+header ul {
+  float: right;
+}
+
+.about-wrapper {
+  background-color: white;
+  width: 100%;
+}
+.about-wrapper .section-icon {
+  margin: 20px auto;
+}
+.about-wrapper .text {
+  display: block;
+  width: 400px;
+  margin: 20px auto;
+}
+.about-wrapper .text .addition {
+  font-size: 13px;
+  font-weight: bold;
+}
+.about-wrapper .text .core {
+  font-size: 15px;
+  font-family: "zennewB";
+  margin-bottom: 20px;
+}
+.about-wrapper .sample-photos {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+}
+.about-wrapper .left,
+.about-wrapper .right {
+  padding: 10px;
+  width: 50%;
+}
+
+.service-wrapper {
+  background-color: #f2f2f2;
+}
+.service-wrapper .container {
+  padding-bottom: 20px;
+}
+.service-wrapper .section-icon {
+  margin: 20px auto;
+  top: 20px;
+}
+.service-wrapper .service-items {
+  padding-top: 40px;
+  display: flex;
+}
+.service-wrapper .service-items .select {
+  margin-right: 20px;
+}
+.service-wrapper .service-items .service-item {
+  width: 50%;
+}
+.service-wrapper .service-items .service-item .service-title-wrapper {
+  align-self: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.service-wrapper .service-items .service-item .service-title-wrapper p {
+  font-family: "zennewB";
+}
+.service-wrapper .service-items .service-item .service-title-wrapper img {
+  height: 70px;
+}
+.service-wrapper .service-items .service-item .explanation {
+  border: 1px solid black;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.message-wrapper {
+  height: 400px;
+  background-color: white;
+  margin-bottom: 40px;
+}
+.message-wrapper .section-icon {
+  margin: 0 auto;
+  top: 20px;
+}
+.message-wrapper .item-wrapper {
+  display: flex;
+}
+.message-wrapper .left,
+.message-wrapper .right {
+  width: 50%;
+  flex: auto;
+}
+.message-wrapper .text {
+  display: block;
+  width: 400px;
+  margin: 20px auto;
+}
+.message-wrapper .text .addition {
+  font-size: 13px;
+  font-weight: bold;
+}
+.message-wrapper .text .core {
+  font-size: 15px;
+  font-family: "zennewB";
+  margin-bottom: 20px;
+}
+.message-wrapper .invite-wrapper {
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+.message-wrapper .invite-wrapper img {
+  height: 50px;
+}
+.message-wrapper .invite-wrapper p {
+  font-family: "zennewB";
+}
+
+footer {
+  height: 100px;
+  background-color: #4d4d4d;
+}
+footer .icon {
+  height: 60px;
+  margin-right: 10px;
+}
+footer h1 {
+  font-size: 35px;
+  margin-top: 10px;
+  font-family: "zennewB";
+  letter-spacing: 5px;
+}
+footer .icon,
+footer h1 {
+  float: left;
+}
+footer ul {
+  float: right;
+}
+footer li {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
