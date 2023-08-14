@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/images/icon/icon.png">
+    <title>Aromelo admin</title>
+    <link rel="stylesheet" href="/css/admin-style.css">
+
+</head>
+
+<body>
+    <main>
+        <h1>アドミン用データベース管理ページ</h1>
+        <div class="form">
+            <h2>データ入力</h2>
+            <div class="qa-wrapper">
+                <% const columns=["場面","香り","香りの系統","曲名","曲のURL","分数","雰囲気","備考"];%>
+                    <form action="/create" method="post">
+                        <% columns.forEach((column)=>{%>
+                            <div class="item-wrapper">
+                                <p>
+                                    <%=column%>
+                                </p>
+                                <input type="text" name="ans">
+                            </div>
+                            <%});%>
+                                <input type="submit" value="追加">
+                    </form>
+            </div>
+
+
+
+        </div>
+
+        </div>
+
+        <div class="list">
+            <h2>データ一覧</h2>
+            <div class="column-title">
+                <li>
+                    <ul>
+                        <span>ID</span>
+                        <% columns.forEach((column)=>{%>
+                            <span>
+                                <%=column%>
+                            </span>
+                            <%});%>
+                                <span></span>
+                                <span></span>
+                    </ul>
+                </li>
+
+
+            </div>
+            <div class="table-body">
+                <li>
+                    <% items.forEach((item)=>{%>
+                        <ul>
+                            <span>
+                                <%=item.id%>
+                            </span>
+                            <span>
+                                <%=item.scene%>
+                            </span>
+                            <span>
+                                <%=item.aroma%>
+                            </span>
+                            <span>
+                                <%=item.aromasort%>
+                            </span>
+                            <span>
+                                <%=item.music%>
+                            </span>
+                            <span class="url">
+                                <a href="<%=item.url%>">
+                                    <%=item.url%>
+                                </a>
+                            </span>
+                            <span>
+                                <%=item.time%>
+                            </span>
+                            <span>
+                                <%=item.mood%>
+                            </span>
+                            <span>
+                                <%=item.other%>
+                            </span>
+                            <span>
+                                <form action="/delete/<%=item.id%>" method="post"><input type="submit" value="削除">
+                                </form>
+                            </span>
+                            <span>
+                                <a href="/edit/<%=item.id%>">編集</a>
+                            </span>
+
+                        </ul>
+
+                        <%});%>
+                </li>
+            </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin-style.css">
+    <title>Aromelo</title>
+</head>
+
+<body>
+    <main>
+        <div class="form">
+            <h2>データ編集</h2>
+            <div class="qa-wrapper">
+                <% const columns=["場面","香り","香りの系統","曲名","曲のURL","分数","雰囲気","備考"]; const
+                    item_list=[items.scene,items.aroma,items.aromasort,items.music,items.url,items.time,items.mood,items.other];%>
+                    <form action="/update/<%=items.id%>" method="post">
+                        <% for (let index=0; index < columns.length; index++) { const column=columns[index]; const
+                            prev_ans=item_list[index];%>
+                            <div class="item-wrapper">
+                                <p>
+                                    <%=column%>
+                                </p>
+                                <input type="text" name="ans" value="<%=prev_ans%>">
+                            </div>
+                            <%};%>
+                                <input type="submit" value="決定">
+                    </form>
+            </div>
+    </main>
+</body>
+
+</html>

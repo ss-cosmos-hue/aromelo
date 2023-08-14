@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    font-family: "zennew";
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.qa-wrapper {
+    width: 100%;
+    max-width: 1170px;
+}
+
+form {
+    display: flex;
+}
+
+.item-wrapper {
+    flex: auto;
+}
+
+.item-wrapper input {
+    width: 100%;
+}
+
+.table-body li,
+.column-title li {
+    width: 80%;
+    padding: 0;
+}
+
+.table-body ul,
+.column-title ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.table-body span,
+.column-title span {
+    display: inline-block;
+    flex: auto;
+    width: 12%;
+}
+
+.url {
+    font-size: 10px;
+    overflow-wrap: break-word;
+}
